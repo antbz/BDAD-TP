@@ -1,0 +1,44 @@
+-- Ex 1
+π nr (Aluno)
+
+-- Ex 2
+π cod, design (σ curso = 'AC' (Cadeira))
+
+-- Ex 3
+(Aluno) ⨝ Aluno.Nome = Prof.Nome (Prof)
+
+-- Ex 4
+π Aluno.Nome ((Aluno) ⨝ Aluno.Nome != Prof.Nome (Prof))
+
+-- Ex 5
+(π Nome (Aluno)) ∪ (π Nome (Prof))
+
+-- Ex 6
+π Nome (σ cod = 'TS1' (Aluno ⨝ Prova))
+
+-- Ex 7
+π Aluno.Nome ((σ curso='IS' Cadeira) ⨝ Prova ⨝ Aluno)
+
+-- Ex 9
+γ max(nota)->nota (Prova)
+
+-- Ex 10
+γ avg(nota)->nota (σ cod = 'BD' (Prova))
+
+-- Ex 11
+γ count(nr)->nr (Aluno)
+
+-- Ex 12
+γ curso; count(cod)->cod (Cadeira)
+
+-- Ex 13
+γ nr; count(data)->data (Prova)
+
+-- Ex 14
+γ avg(data)->data (γ nr; count(data)->data (Prova))
+
+-- Ex 15
+π Nome, nota (γ nr; avg(nota)->nota (Prova) ⨝ Aluno)
+
+-- Ex 16
+π cod, nota, nr (γ cod; max(nota)->nota (Prova) ⨝ Prova)

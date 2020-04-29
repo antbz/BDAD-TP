@@ -1,0 +1,5 @@
+SELECT DISTINCT codPostal1
+FROM Cliente
+INTERSECT
+SELECT DISTINCT codPostal1
+FROM Funcionario;
