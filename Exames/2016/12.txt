@@ -1,0 +1,11 @@
+R(A,B,C,D,E,F,G,H)
+ABC->DGH
+F->B
+B->E
+G->H
+
+{A,B,C}+ = {A,B,C,D,E,G,H} 
+
+Como para que uma relação esteja na BCNF é necessário que o lado esquerdo de todas
+as suas dependências funcionais seja uma superchave, esta relação não está na forma
+normal, pois não respeita esta condição.

@@ -1,0 +1,7 @@
+DROP TRIGGER IF EXISTS MeGusta;
+
+CREATE TRIGGER MeGusta
+AFTER INSERT ON AppearsIn
+BEGIN
+INSERT INTO Likes VALUES (New.user, New.photo);
+END;

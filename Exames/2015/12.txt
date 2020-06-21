@@ -1,0 +1,11 @@
+R1(A, B, E)
+FD: A -> B, E
+
+R2(B, C, D)
+FD: B -> C, D
+
+R3(A, F)
+Sem FDs
+
+Como do lado esquerdo de todas as dependências funcionais
+está uma superkey, as relações estão na BCNF.

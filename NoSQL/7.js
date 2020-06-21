@@ -1,0 +1,1 @@
+db.tweets.find({'user.time_zone':'Lisbon'}).count()

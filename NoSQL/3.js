@@ -1,0 +1,1 @@
+db.tweets.aggregate([{'$sortByCount':'$entities.hashtags.text'}])

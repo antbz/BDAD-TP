@@ -1,0 +1,24 @@
+R(A, B, C, D, E, F)
+A -> B
+B -> CD
+AD ->E
+
+3NF
+
+{A}+ = {A} -- A -> B essencial
+{B}+ = {B} -- B -> CD essencial
+{AD}+ = {A, B, C, D} -- AD -> E essencial
+    - {A}+ = {A, B, C, D} logo D é redundante
+
+A -> B, E
+B -> C, D
+
+R1 (A, B, E)
+R2 (B, C, D)
+
+Chaves {A, F}
+
+Logo:
+R1(A, B, E)
+R2(B, C, D)
+R3(A, F)

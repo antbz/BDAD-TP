@@ -1,0 +1,1 @@
+db.tweets.find({},{'user.friends_count':1, 'text':1}).limit(100).sort({'user.friends_count':-1})
